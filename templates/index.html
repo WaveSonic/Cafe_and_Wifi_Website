@@ -1,0 +1,28 @@
+{% include "header.html" %}
+{%  block content %}
+<div class="container" style="text-align:center; padding:10px;">
+    <h1>{{category}}</h1>
+</div>
+<div class="container">
+    <div class="bd-example-snippet bd-code-snippet"><div class="bd-example">
+        <table class="table table-striped">
+          <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Назва закладу</th>
+            <th scope="col">Адреса</th>
+          </tr>
+          </thead>
+          <tbody>
+            {% for x in range (name | length) %}
+            <tr>
+              <th scope="row">{{x+1}}</th>
+              <td>{{name[x]}}</td>
+              <td>{{address[x]}}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+        </div></div></div>
+{% endblock %}
+{% include "footer.html" %}
